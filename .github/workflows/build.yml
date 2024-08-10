@@ -24,6 +24,7 @@ jobs:
         run: |
           docker exec gcc bash -c 'LDFLAGS="${LDFLAGS} -static" make -C /proot/src proot'
           docker cp gcc:/proot/src/proot .
+          ls
 
       - name: 下载产物
         uses: actions/upload-artifact@v4
